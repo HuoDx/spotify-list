@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './css/ConnectSpotify.css';
 import { generateSpotifyLoginURL } from './SpotifyAPI';
 
 async function _connect() {
@@ -9,8 +9,8 @@ async function _connect() {
 
 function ConnectSpotify() {
     return (
-        <div>
-            <h1>Connect to Spotify</h1>
+        <div className="center">
+            <h1>Spotify List</h1>
             <button onClick={() => _connect()}>Get Started!</button>
         </div>
     );

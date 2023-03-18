@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, NativeRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import ConnectSpotify from './ConnectSpotify'
 import Callback from './Callback'
 import SpotifyList from './SpotifyList'
-
+import './css/base.css'
 // this cannot be refactored to a TypeScript
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

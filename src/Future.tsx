@@ -10,7 +10,7 @@ function DefaultErrorPage(props: IStandardErrorPageProps): React.ReactElement {
 
 function DefaultLoadingPage(): React.ReactElement {
     return (<div>
-        <img src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/svg-css/ring-resize.svg" />
+        
     </div>);
 }
 
@@ -41,13 +41,10 @@ function Future(props: IFutureProps): React.ReactElement {
         obtainedPromise
             .then((data) => setDisplayedChild(props.children(data)))
             .catch((err) => setDisplayedChild(errorPage(err)))
-    }, []);
-
-    return (
-        <div>
-            {displayedChild}
-        </div>
-    );
+    },[]);
+    console.log('call render')
+    return displayedChild;
+        
 }
 
 export default Future;

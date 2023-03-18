@@ -6,11 +6,15 @@ import PlaylistBoard from './SLComponents/PlaylistBoard';
 
 function SpotifyList() {
     return (
-        <div>
-            <h1>Spotify List</h1>
-            <UserProfileBoard />
-            <TopTracks />
-            <PlaylistBoard />
+        <div className="container">
+            <header>
+                <h1>Spotify List</h1>
+                <UserProfileBoard />
+            </header>
+            <div>
+                <TopTracks/>
+                <PlaylistBoard />
+            </div>
         </div>
     );
 }

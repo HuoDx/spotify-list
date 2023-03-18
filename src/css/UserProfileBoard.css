@@ -1,0 +1,14 @@
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-box {
+    margin-left: 8px;
+    padding-left: 8px;
+    border-left: #e5e5e5 solid 1px;
+}
+

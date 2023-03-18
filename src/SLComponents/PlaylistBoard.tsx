@@ -30,18 +30,17 @@ export default function PlaylistBoard() {
 function Playlist(props: { id: string, name: string, listKey: number }) {
     return (
         <li key={props.listKey}>
-            <div>{props.name}</div>
-            <PlaylistInsights id={props.id} />
+            <PlaylistInsights id={props.id} name={props.name}/>
         </li>
     );
 }
 
-function PlaylistInsights(props: { id: string }) {
+function PlaylistInsights(props: { id: string, name: string }) {
     return (
         <Future promise={() => getPlaylistTracks(props.id)}>
             {data =>
                 <div>
-                    <h3>Playlist Insights ({data.length} tracks)</h3>
+                    <h3>{props.name} ({data.length} tracks)</h3>
                     <ul>
                         {data.map((track: IPlaylistTrack, i: number) => {
                             return <li key={i}>{track.track.name}</li>
