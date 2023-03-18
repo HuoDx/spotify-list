@@ -12,8 +12,9 @@ function ConnectSpotify() {
         <div>
             <h1>Connect to Spotify</h1>
             <button onClick={() => _connect()}>Get Started!</button>
-        </div>)
+        </div>
+    );
 }
 
 
-export default ConnectSpotify
+export default ConnectSpotify;
